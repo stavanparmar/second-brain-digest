@@ -1,0 +1,9 @@
+rss_feeds:
+  - name: "Hacker News"
+    url: "https://hnrss.org/frontpage"
+  - name: "TechCrunch"
+    url: "https://techcrunch.com/feed/"
+
+subreddits:
+  - name: "MachineLearning"
+    limit: 5

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 960px; margin: 40px auto; padding: 0 20px; color: #1f2937; }
+      h1 { margin-bottom: 0.5em; }
+      .meta { color: #6b7280; margin-bottom: 2rem; }
+      ul { padding-left: 1.25rem; }
+      li { margin-bottom: 1rem; }
+      a { color: #2563eb; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .summary { color: #374151; }
+    </style>
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <div class="meta">Generated on {{ generated_at }}</div>
+
+    {% if items %}
+      <ul>
+        {% for item in items %}
+          <li>
+            <strong><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a></strong>
+            <div>{{ item.source }}</div>
+            <div class="summary">{{ item.summary }}</div>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No items were available for this digest.</p>
+    {% endif %}
+  </body>
+</html>

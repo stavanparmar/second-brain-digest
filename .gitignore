@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+.env
+.venv/
+.pytest_cache/
+.mypy_cache/
+raw_items.json
+summarized_items.json
+*.log
+.DS_Store
